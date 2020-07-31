@@ -18,6 +18,10 @@ Route::post('register', 'API\UserController@register');
 
 Route::group(['middleware' => 'auth:api'], function() {
     Route::post('details', 'API\UserController@details');
+    Route::post('create-contact', 'API\UserController@createcontact');
+    Route::post('update-contact', 'API\UserController@updatecontact');
+    Route::post('contact', 'API\UserController@contact');
+    Route::post('user-contact', 'API\UserController@usercontact');
 });
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
